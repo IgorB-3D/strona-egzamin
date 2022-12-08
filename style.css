@@ -61,6 +61,11 @@ header a {
 	border-radius: 50px;
 	text-decoration: none;
 	color: #fff;
+	transition: letter-spacing 0.1s;
+}
+
+header a:hover {
+	letter-spacing: 0.1em;
 }
 
 section {
@@ -103,19 +108,24 @@ ul {
 	padding: 25px;
 }
 
-aside {
+footer {
 	border: 2px dashed #ec5f3c;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 }
 
-aside li {
+footer li {
 	padding: 15px;
 }
 
-aside img {
+footer img {
 	width: 2em;
+	transition: transform 0.1s;
+}
+
+footer img:hover {
+	transform: rotate(15deg);
 }
 
 input {
@@ -137,12 +147,13 @@ input {
 		width: 70vw;
 	}
 
-	aside {
+	footer {
+		border: none;
 		position: fixed;
 		width: calc(100% - 4px);
 	}
 
-	aside ul {
+	footer ul {
 		justify-content: center;
 		display: flex;
 	}
