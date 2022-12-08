@@ -1,0 +1,185 @@
+body {
+	background-image: url("img/background.webp");
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	font-size: 18px;
+	margin: 0 0 0 0;
+	font-family: 'Roboto Mono', sans-serif;
+}
+
+nav {
+	background-color: #0f0f0f;
+	padding: 10px;
+	position: sticky;
+	top: 0;
+}
+
+nav ul {
+	display: flex;
+	list-style-type: none;
+	justify-content: space-evenly;
+	text-transform: uppercase;
+}
+
+nav a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+h1, h2 {
+	margin: 0 0 0 0;
+	font-weight: normal;
+	font-style: italic;
+	letter-spacing: 0.2ch;
+}
+
+header {
+	font-family: 'Titan One', serif;
+	display: grid;
+	place-items: center;
+	grid-template-columns: 2fr 1fr;
+	margin: auto;
+	margin-top: 13vh;
+	width: 70vw;
+}
+
+.sview {
+	font-family: 'Roboto Mono', sans-serif;
+	max-width: 30ch;
+	max-height: 28ch;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+header a {
+	line-height: 4em;
+	padding: 15px 30px 15px 30px;
+	background: #f33722;
+	border: 2px solid #fff;
+	border-radius: 50px;
+	text-decoration: none;
+	color: #fff;
+}
+
+section {
+	width: 60vw;
+	margin: auto;
+}
+
+section p {
+	max-width: 40ch;
+}
+
+.vid::before {
+	content: "▶";
+	padding: 1ch 1.5ch;
+	background: #2233e9;
+	border: 2px solid #fff;
+	border-radius: 80px;
+	margin-right: 15px;
+}
+
+.tree {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tree::before {
+	content: "";
+	display: inline-block;
+	vertical-align: top;
+	width: 2ch;
+	height: 2ch;
+	margin-right: 5px;
+	background-image: url("img/tree.svg");
+	background-size: 2ch 2ch;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 25px;
+}
+
+aside {
+	border: 2px dashed #ec5f3c;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+aside li {
+	padding: 15px;
+}
+
+aside img {
+	width: 2em;
+}
+
+input {
+	display: none;
+}
+
+@media all and (max-width: 1200px) {
+	header {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	.sview {
+		max-width: 100vw;
+	}
+
+	section {
+		width: 70vw;
+	}
+
+	aside {
+		position: fixed;
+		width: calc(100% - 4px);
+	}
+
+	aside ul {
+		justify-content: center;
+		display: flex;
+	}
+
+	nav ul {
+		display: none;
+	}
+
+	nav {
+		position: fixed;
+		width: 100%;
+		padding: 0 0 0 0;
+		z-index: 500;
+	}
+
+	nav {
+		display: grid;
+		place-items: end;
+	}
+
+	nav ul {
+		width: 100%;
+		padding: 0 0 0 0;
+	}
+
+	label::before {
+		content: "☰";
+		font-size: 3em;
+		margin-right: 15px;
+		display: inline-block;
+	}
+	
+	input:checked + ul {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-around;
+		height: calc(100vh - 4em);
+	}
+}
